@@ -1,0 +1,11 @@
+/target
+**/*.rs.bk
+
+# macOS
+.DS_Store
+
+# temporary files
+tmp/
+
+# IDEs
+.idea/

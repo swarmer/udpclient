@@ -1,0 +1,15 @@
+[package]
+name = "udpclient"
+description = "A command line UDP testing/debugging utility"
+publish = false
+license = "MIT"
+version = "0.1.0"
+authors = ["Anton Barkovsky <anton@swarmer.me>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33.0"
+
+[[bin]]
+name = "udp"
+path = "src/main.rs"
