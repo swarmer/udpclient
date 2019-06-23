@@ -9,6 +9,8 @@ edition = "2018"
 
 [dependencies]
 clap = "2.33.0"
+tokio = "0.1.21"
+futures = "0.1.27"
 
 [[bin]]
 name = "udp"
