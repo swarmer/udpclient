@@ -44,7 +44,7 @@ pub fn cli_send(args: &SendArgs) {
         .expect("Failed reading packet from stdin");
 
     let socket =
-        std::net::UdpSocket::bind(("127.0.0.1", 0)).expect("Failed to open a socket");
+        std::net::UdpSocket::bind("0.0.0.0:0").expect("Failed to open a socket");
     socket
         .send_to(&buf, (&*args.host, args.port))
         .expect("Failed to send the packet");
