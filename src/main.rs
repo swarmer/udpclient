@@ -98,8 +98,7 @@ fn cli_send(args: &SendArgs) {
         .read_to_end(&mut buf)
         .expect("Failed reading packet from stdin");
 
-    let socket =
-        std::net::UdpSocket::bind("0.0.0.0:0").expect("Failed to open a socket");
+    let socket = std::net::UdpSocket::bind("0.0.0.0:0").expect("Failed to open a socket");
     socket
         .send_to(&buf, (&*args.host, args.port))
         .expect("Failed to send the packet");
